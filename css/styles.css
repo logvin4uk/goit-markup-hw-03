@@ -12,23 +12,54 @@ body {
 }
 
 /* Reset tags */
-h1,h2,h3,h4,h5,h6,p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
-ul{
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-img{
+img {
   display: block;
 }
+
 /* end reset tags */
 
+/* defult styles */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+
 /* header*/
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .logotop {
+  margin-right: 92px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -44,10 +75,22 @@ img{
 }
 
 .navigation {
+  display: flex;
   list-style-type: none;
 }
 
-.navigation-list {
+.navigation-item {
+  margin-right: 50px;
+}
+
+.navigation-item:last-child {
+  margin-right: 0px;
+}
+
+.navigation-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -55,21 +98,32 @@ img{
   text-decoration: none;
   color: var(--text-color);
 }
-.navigation-list:hover,
-navigation-list:active {
+
+.navigation-link:hover,
+.navigation-link:active {
   color: var(--active-color);
 }
+
+.contact-top {
+  margin-left: auto;
+  display: flex;
+}
+
+.contact-top-item + .contact-top-item {
+  margin-left: 50px;
+}
 .infotop {
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: #757575;
   text-decoration: none;
-  margin-right: 30px;
 }
 
-.infotop:last-child{
+.infotop:last-child {
   margin-right: 0px;
 }
 
@@ -90,7 +144,6 @@ navigation-list:active {
   text-align: center;
 }
 .hero-header {
- 
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
@@ -102,7 +155,6 @@ navigation-list:active {
   margin-left: auto;
   margin-right: auto;
   width: 696px;
-
 }
 .hero-button {
   background: var(--active-color);
@@ -117,15 +169,22 @@ navigation-list:active {
   color: #ffffff;
   border: 0px;
   cursor: pointer;
-padding: 10px 32px;
-
+  padding: 10px 32px;
 }
 
 /* advantages */
 .advantages-list {
   list-style-type: none;
+  display: flex;
+}
+.advantages-list .item {
+  margin-right: 30px;
+}
+.item:last-child {
+  margin-right: 0;
 }
 .advantages-header {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -141,6 +200,8 @@ padding: 10px 32px;
 
 /* What we do */
 .skills-header {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -148,15 +209,26 @@ padding: 10px 32px;
   letter-spacing: 0.03em;
 }
 .skills-list {
+  display: flex;
   list-style-type: none;
+}
+.skills-list .item {
+  margin-right: 30px;
+}
+.item:last-child {
+  margin-right: 0;
 }
 
 /*Our command */
 .command {
+  padding-top: 94px;
+  padding-bottom: 94px;
 
   background: #f5f4fa;
 }
 .command-header {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -164,16 +236,33 @@ padding: 10px 32px;
   letter-spacing: 0.03em;
 }
 .command-list {
+  display: flex;
   list-style-type: none;
+}
+.command-list-item {
+  display: block;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.command-list-item:last-child {
+  margin-right: 0;
+}
+.command-images {
+  margin-bottom: 30px;
 }
 
 .member {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
 }
 .member-description {
+  margin-bottom: 30px;
+
   font-size: 16px;
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
@@ -188,9 +277,14 @@ padding: 10px 32px;
 
 /* footer */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background: var(--bgcolor-foter-top);
 }
 .logo-bottom {
+  margin-bottom: 20px;
+
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -200,6 +294,7 @@ padding: 10px 32px;
   text-decoration: none;
 }
 .address-text {
+  margin-bottom: 9px;
   font-style: normal;
   font-size: 14px;
   line-height: calc(24 / 14);
@@ -207,13 +302,16 @@ padding: 10px 32px;
   color: #ffffff;
 }
 .address-contact {
+  display: block;
   font-style: normal;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  display: inline-block;
+}
+.address-contact:not(:last-child) {
+  margin-bottom: 9px;
 }
 .address-contact:hover,
 .address-contact:active {
@@ -221,8 +319,19 @@ padding: 10px 32px;
 }
 .filter-list {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filter-list .item {
+  margin-right: 8px;
 }
 .filter-list-button {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -236,19 +345,41 @@ padding: 10px 32px;
   border: 0px;
   cursor: pointer;
 }
+.filter-list-button:first-child {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 .filter-list-button:hover,
 .filter-list-button:active {
   background: var(--active-color);
   color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .project-list {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 .project-list-item {
   background: #ffffff;
+  width: 368px;
   border: 1px solid #eeeeee;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.project-list-item:nth-child(3n) {
+  margin-right: 0;
+}
+.img-project {
+  margin-bottom: 20px;
 }
 .project-list-header {
+  margin-bottom: 4px;
+  margin-right: 24px;
+  margin-left: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: calc(36 / 18);
@@ -256,17 +387,12 @@ padding: 10px 32px;
   color: var(--text-color);
 }
 .project-list-text {
+  margin-bottom: 20px;
+  margin-right: 24px;
+  margin-left: 24px;
+
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
   color: #757575;
-}
-
-/* defolt styles */
-.container{
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
