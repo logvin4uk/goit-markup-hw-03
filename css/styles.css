@@ -43,8 +43,11 @@ img {
   margin-right: auto;
 }
 .section {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section + .section {
+  padding-top: 0;
 }
 
 /* header*/
@@ -57,6 +60,8 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  border-bottom: 1px solid #ececec;
 }
 .logotop {
   margin-right: 92px;
@@ -100,7 +105,7 @@ img {
 }
 
 .navigation-link:hover,
-.navigation-link:active {
+.navigation-link:focus {
   color: var(--active-color);
 }
 
@@ -128,7 +133,7 @@ img {
 }
 
 .infotop:hover,
-.infotop:active {
+.infotop:focus {
   color: var(--active-color);
 }
 
@@ -253,6 +258,11 @@ img {
 }
 
 .member {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+.member-header {
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -261,8 +271,6 @@ img {
   letter-spacing: 0.03em;
 }
 .member-description {
-  margin-bottom: 30px;
-
   font-size: 16px;
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
@@ -283,6 +291,8 @@ img {
   background: var(--bgcolor-foter-top);
 }
 .logo-bottom {
+  display: block;
+
   margin-bottom: 20px;
 
   font-family: 'Raleway';
@@ -314,7 +324,7 @@ img {
   margin-bottom: 9px;
 }
 .address-contact:hover,
-.address-contact:active {
+.address-contact:focus {
   color: var(--active-color);
 }
 .filter-list {
@@ -352,7 +362,7 @@ img {
   padding-right: 25px;
 }
 .filter-list-button:hover,
-.filter-list-button:active {
+.filter-list-button:focus {
   background: var(--active-color);
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -365,7 +375,7 @@ img {
 }
 .project-list-item {
   background: #ffffff;
-  width: 368px;
+  width: 370px;
   border: 1px solid #eeeeee;
   margin-right: 30px;
   margin-bottom: 30px;
@@ -373,13 +383,17 @@ img {
 .project-list-item:nth-child(3n) {
   margin-right: 0;
 }
-.img-project {
+
+.project-info {
+  margin-left: 24px;
+  margin-right: 24px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
+
 .project-list-header {
   margin-bottom: 4px;
-  margin-right: 24px;
-  margin-left: 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: calc(36 / 18);
@@ -387,10 +401,6 @@ img {
   color: var(--text-color);
 }
 .project-list-text {
-  margin-bottom: 20px;
-  margin-right: 24px;
-  margin-left: 24px;
-
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
